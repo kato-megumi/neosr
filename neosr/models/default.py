@@ -670,7 +670,7 @@ class default():
             if save_img:
                 if self.opt['is_train']:
                     save_img_path = osp.join(self.opt['path']['visualization'], img_name,
-                                             f'{img_name}_{current_iter}.png')
+                                             f'{img_name}_{current_iter}_{self.opt["name"]}.png')
                 else:
                     if self.opt['val']['suffix']:
                         save_img_path = osp.join(self.opt['path']['visualization'], dataset_name,
