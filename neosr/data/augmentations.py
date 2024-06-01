@@ -67,10 +67,10 @@ def cutmix(img_gt, img_lq, alpha=0.9):
         cx = rng.integers(W)
         cy = rng.integers(H)
 
-        bbx1 = np.clip(cx - cut_w // 2, 0, W)
-        bby1 = np.clip(cy - cut_h // 2, 0, H)
-        bbx2 = np.clip(cx + cut_w // 2, 0, W)
-        bby2 = np.clip(cy + cut_h // 2, 0, H)
+        bbx1 = int(np.clip(cx - cut_w // 2, 0, W))
+        bby1 = int(np.clip(cy - cut_h // 2, 0, H))
+        bbx2 = int(np.clip(cx + cut_w // 2, 0, W))
+        bby2 = int(np.clip(cy + cut_h // 2, 0, H))
 
         return bbx1, bby1, bbx2, bby2
 
@@ -115,10 +115,10 @@ def resizemix(img_gt, img_lq, scope=(0.2, 0.9)):
         cx = rng.integers(W)
         cy = rng.integers(H)
 
-        bbx1 = np.clip(cx - cut_w // 2, 0, W)
-        bby1 = np.clip(cy - cut_h // 2, 0, H)
-        bbx2 = np.clip(cx + cut_w // 2, 0, W)
-        bby2 = np.clip(cy + cut_h // 2, 0, H)
+        bbx1 = int(np.clip(cx - cut_w // 2, 0, W))
+        bby1 = int(np.clip(cy - cut_h // 2, 0, H))
+        bbx2 = int(np.clip(cx + cut_w // 2, 0, W))
+        bby2 = int(np.clip(cy + cut_h // 2, 0, H))
 
         return bbx1, bby1, bbx2, bby2
 
@@ -179,10 +179,10 @@ def cutblur(img_gt, img_lq, alpha=0.7):
         cx = rng.integers(W)
         cy = rng.integers(H)
 
-        bbx1 = np.clip(cx - cut_w // 2, 0, W)
-        bby1 = np.clip(cy - cut_h // 2, 0, H)
-        bbx2 = np.clip(cx + cut_w // 2, 0, W)
-        bby2 = np.clip(cy + cut_h // 2, 0, H)
+        bbx1 = int(np.clip(cx - cut_w // 2, 0, W))
+        bby1 = int(np.clip(cy - cut_h // 2, 0, H))
+        bbx2 = int(np.clip(cx + cut_w // 2, 0, W))
+        bby2 = int(np.clip(cy + cut_h // 2, 0, H))
 
         return bbx1, bby1, bbx2, bby2
 
