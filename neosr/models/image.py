@@ -917,7 +917,7 @@ class image(base):
                     save_img_path = (
                         Path(self.opt["path"]["visualization"])
                         / img_name
-                        / f"{img_name}_{current_iter}.png"
+                        / f"{img_name}_{current_iter}_{self.opt["name"]}.png"
                     )
                 elif val_suffix is not None:
                     save_img_path = (
